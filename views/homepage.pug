@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title= title
+  body
+    h1 Trips
+    a(href="/update-cobj") Add to this table
+    br
+    br
+    table(border="1" cellpadding="8" cellspacing="0")
+      thead
+        tr
+          th Name
+          th Country to Visit
+          th Trip Budget
+          th Trip Category
+      tbody
+        each trip in data
+          tr
+            td= trip.properties.trip_name
+            td= trip.properties.countries_to_visi
+            td= trip.properties.trip_budget
+            td= trip.properties.trip_category
